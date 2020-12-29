@@ -1,0 +1,21 @@
+{
+  "name": "challenge-1",
+  "version": "1.0.0",
+  "description": "Create an express server for a blog application which should have following details :\r 1. blogName - name of the blog\r 2. blogDescription - body of the blog\r 3. blogDate - date of the blog creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
+  }
+}
