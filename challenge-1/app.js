@@ -7,7 +7,6 @@ dotenv.config();
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-
 // parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -19,10 +18,10 @@ app.use(cors());
 const mongoURI = process.env.MONGO_URI;
 mongoose.Promise = global.Promise;
 const options = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
 };
 mongoose.connect(mongoURI, options);
 
@@ -31,9 +30,10 @@ db.on("error", console.error.bind(console, "Connection Error"));
 db.once("open", () => console.log("Connected to mongodb!"));
 
 // routes
-// const router = require('./routes');
+const blogRouter = require("./routes/blog");
 
-// app.use(router);
+app.use("/blog", blogRouter);
+
 // server
 const PORT = process.env.PORT || 3000;
 
